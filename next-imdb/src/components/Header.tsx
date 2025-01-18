@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DarkModeSwitch from "./DarkMode";
 
 const Header: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Header: React.FC = () => {
         </li>
       </ul>
       <div className="flex items-center gap-4">
+        <DarkModeSwitch />
         <Link href={"/"} className="flex gap-1 items-center">
           <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
             IMDb
