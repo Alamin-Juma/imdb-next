@@ -2,7 +2,6 @@
 
 import { ThemeProvider } from "next-themes";
 
-type Props = {};
 
 const ThemeComp = ({
   children,

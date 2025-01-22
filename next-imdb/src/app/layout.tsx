@@ -5,11 +5,7 @@ import Header from "@/components/Header";
 import ThemeComp from "@/components/ThemeComp";
 
 import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  ClerkProvider
 } from "@clerk/nextjs";
 
 const geistSans = Geist({

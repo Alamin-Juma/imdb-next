@@ -4,9 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import { useTheme } from 'next-themes';
 
-type Props = {}
-
-const DarkModeSwitch: React.FC<Props> = () => {
+const DarkModeSwitch: React.FC = () => {
   const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -33,7 +31,6 @@ const DarkModeSwitch: React.FC<Props> = () => {
       )}
     </div>
   );
-}
+};
 
 export default DarkModeSwitch;
-
