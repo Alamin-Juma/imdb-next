@@ -3,14 +3,6 @@ import { headers } from 'next/headers'
 import { clerkClient, WebhookEvent } from '@clerk/nextjs/server'
 import { createOrUpdateUser, deleteUser } from '@/lib/actions/user'
 
-interface User {
-    _id: string;
-    first_name: string;
-    last_name: string;
-    image_url: string;
-    email_addresses: string[]; 
-  }
-
 export async function POST(req: Request) {
   const SIGNING_SECRET = process.env.SIGNING_SECRET
 

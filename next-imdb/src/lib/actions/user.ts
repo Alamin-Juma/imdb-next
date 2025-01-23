@@ -2,10 +2,6 @@ import { IUser } from "@/utils/types/User";
 import User from "../models/user.model";
 import { connect } from "../mongodb/mongoose";
 
-interface EmailAddress {
-    email_address: string;
-}
-
 export const createOrUpdateUser = async (
     clerkId: string,
     firstName: string,
