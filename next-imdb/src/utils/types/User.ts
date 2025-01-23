@@ -18,3 +18,5 @@ export interface IUser extends Document {
   profilePicture: string;
   favs: IFav[];
 }
+
+//this is a type safe
