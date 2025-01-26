@@ -3,6 +3,8 @@ import { headers } from 'next/headers'
 import { WebhookEvent } from '@clerk/nextjs/server'
 
 export async function POST(req: Request) {
+  console.log('Webhook received!'); // Log to confirm the webhook is triggered
+
   const SIGNING_SECRET = process.env.SIGNING_SECRET
 
   if (!SIGNING_SECRET) {
@@ -46,14 +48,13 @@ export async function POST(req: Request) {
   }
 
   // Do something with payload
-  // For this guide, log payload to console
   const { id } = evt.data
   const eventType = evt.type
   console.log(`Received webhook with ID ${id} and event type of ${eventType}`)
   console.log('Webhook payload:', body)
 
-  if(eventType === 'user.created') {
-    console.log('user created')
+  if (eventType === 'user.created') {
+    console.log('User created:', evt.data); // Log user creation event
   }
 
   return new Response('Webhook received', { status: 200 })
